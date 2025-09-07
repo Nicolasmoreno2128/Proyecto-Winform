@@ -2,8 +2,8 @@
 
 ## 🧑‍🤝‍🧑 Integrantes del Grupo
 
--
-- 
+- **Julián** - Legajo:
+- **Nicolás Moreno** - Legajo: 25550
 - **Guido Jaulin** - Legajo: 29808  
 
 ---

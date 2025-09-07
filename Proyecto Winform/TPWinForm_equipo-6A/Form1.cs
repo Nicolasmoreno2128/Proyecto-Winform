@@ -1,5 +1,4 @@
-﻿using negocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TPWinForm_equipo_6A
 {
-    public partial class Form1 : Form
+    public partial class Form1: Form
     {
         public Form1()
         {
             InitializeComponent();
-        }
-
-        public void Form1_Load(object sender, EventArgs e)
-        {
-            ArticuloNegocio articulo = new ArticuloNegocio();
-            dgvListaArticulos.DataSource = articulo.listar();
         }
     }
 }

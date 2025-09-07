@@ -30,6 +30,7 @@
         {
             this.dgvListaArticulos = new System.Windows.Forms.DataGridView();
             this.lblListaArticulos = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,19 +54,16 @@
             this.lblListaArticulos.TabIndex = 1;
             this.lblListaArticulos.Text = "Lista de Artículos";
             // 
-            // Form1
+            // button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblListaArticulos);
-            this.Controls.Add(this.dgvListaArticulos);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            this.button1.Location = new System.Drawing.Point(276, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            
 
         }
 
@@ -73,6 +71,7 @@
 
         private System.Windows.Forms.DataGridView dgvListaArticulos;
         private System.Windows.Forms.Label lblListaArticulos;
+        private System.Windows.Forms.Button button1;
     }
 }
 

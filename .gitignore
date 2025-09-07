@@ -1,0 +1,40 @@
+# Archivos de usuario y temporales
+*.suo
+*.backup
+*.user
+*.dbmdl
+*.pptx
+*.psess
+*.orig
+*.xml
+*.~vsd
+*.zip
+*.sublime-project
+*.sublime-workspace
+*.exe
+*.avi
+*.mp4
+*.mov
+*.rar
+*.mdf
+*.ldf
+*.db
+*.log
+*.log.1
+*.log.*
+
+# Directorios y archivos específicos
+**/nuspec.list
+**/packages/
+**/.sass-cache/
+**/node_modules/
+**/bower_components/
+*/Performance/*TestResults.txt
+**/bin
+**/obj
+
+# Carpeta de Visual Studio
+.vs/
+
+# Publicaciones
+Publish/

@@ -28,13 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvListaArticulos = new System.Windows.Forms.DataGridView();
+            this.lblListaArticulos = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvListaArticulos
+            // 
+            this.dgvListaArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaArticulos.Location = new System.Drawing.Point(53, 72);
+            this.dgvListaArticulos.Name = "dgvListaArticulos";
+            this.dgvListaArticulos.Size = new System.Drawing.Size(691, 190);
+            this.dgvListaArticulos.TabIndex = 0;
+            // 
+            // lblListaArticulos
+            // 
+            this.lblListaArticulos.AutoSize = true;
+            this.lblListaArticulos.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaArticulos.Location = new System.Drawing.Point(53, 32);
+            this.lblListaArticulos.Name = "lblListaArticulos";
+            this.lblListaArticulos.Size = new System.Drawing.Size(169, 25);
+            this.lblListaArticulos.TabIndex = 1;
+            this.lblListaArticulos.Text = "Lista de Artículos";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblListaArticulos);
+            this.Controls.Add(this.dgvListaArticulos);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvListaArticulos;
+        private System.Windows.Forms.Label lblListaArticulos;
     }
 }
 

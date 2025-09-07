@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvListaArticulos = new System.Windows.Forms.DataGridView();
+            this.lblListaArticulos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,11 +43,22 @@
             this.dgvListaArticulos.Size = new System.Drawing.Size(691, 190);
             this.dgvListaArticulos.TabIndex = 1;
             // 
+            // lblListaArticulos
+            // 
+            this.lblListaArticulos.AutoSize = true;
+            this.lblListaArticulos.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaArticulos.Location = new System.Drawing.Point(53, 26);
+            this.lblListaArticulos.Name = "lblListaArticulos";
+            this.lblListaArticulos.Size = new System.Drawing.Size(139, 21);
+            this.lblListaArticulos.TabIndex = 2;
+            this.lblListaArticulos.Text = "Lista de Artículos";
+            // 
             // ListaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblListaArticulos);
             this.Controls.Add(this.dgvListaArticulos);
             this.Name = "ListaArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -54,11 +66,13 @@
             this.Load += new System.EventHandler(this.ListaArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListaArticulos;
+        private System.Windows.Forms.Label lblListaArticulos;
     }
 }

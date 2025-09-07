@@ -33,7 +33,7 @@
             // 
             // BtnArticulos
             // 
-            this.BtnArticulos.Location = new System.Drawing.Point(199, 156);
+            this.BtnArticulos.Location = new System.Drawing.Point(199, 158);
             this.BtnArticulos.Name = "BtnArticulos";
             this.BtnArticulos.Size = new System.Drawing.Size(207, 66);
             this.BtnArticulos.TabIndex = 0;

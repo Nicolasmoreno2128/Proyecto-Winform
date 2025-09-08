@@ -150,6 +150,7 @@
             this.btbAgregarArticulo.TabIndex = 0;
             this.btbAgregarArticulo.Text = "Artículos";
             this.btbAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btbAgregarArticulo.Click += new System.EventHandler(this.btbAgregarArticulo_Click);
             // 
             // lblTituloModificar
             // 

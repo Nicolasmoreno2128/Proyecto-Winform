@@ -27,5 +27,16 @@ namespace TPWinForm_equipo_6A
             ListaArticulos ventana3 = new ListaArticulos();
             ventana3.ShowDialog();
         }
+
+        private void btbAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarArticulo))
+                    return;
+            }
+            AgregarArticulo alta = new AgregarArticulo();
+            alta.ShowDialog();
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 ## 🧑‍🤝‍🧑 Integrantes del Grupo
 
-- **Julián** - Legajo:
+- **Julián Parodi** - Legajo: 25568
 - **Nicolás Moreno** - Legajo: 25550
 - **Guido Jaulin** - Legajo: 29808  
 

@@ -38,5 +38,11 @@ namespace TPWinForm_equipo_6A
             AgregarArticulo alta = new AgregarArticulo();
             alta.ShowDialog();
         }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            frmEliminarArticulo eliminar = new frmEliminarArticulo();
+            eliminar.ShowDialog();
+        }
     }
 }

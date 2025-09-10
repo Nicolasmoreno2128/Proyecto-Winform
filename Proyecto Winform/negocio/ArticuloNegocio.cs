@@ -17,7 +17,8 @@ namespace negocio
             SqlCommand comando = new SqlCommand();        //Declaro y creo objeto comando para realizar acciones con la conexion  
             SqlDataReader lector;
             try
-            {
+            {   // Lineas 21 y 22, diferentes forma de conectar con la base de datos (Comentar y descomentar la que les funcione)
+                //conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
                 conexion.ConnectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
@@ -56,10 +57,11 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+ 
                 datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdCategoria, IdMarca) " + "VALUES ('" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', " + nuevo.Precio + ", " + nuevo.Categoria.Id + ", " + nuevo.Marca.Id + ")");
                 datos.ejecutarAccion();
             }
-            catch ( Exception ex)
+            catch (Exception ex)
             {
 
                 throw ex;
@@ -68,7 +70,24 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
-
         }
+
+        public void eliminarRegistro(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from ARTICULOS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
-}
+    }
+

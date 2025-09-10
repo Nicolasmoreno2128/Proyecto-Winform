@@ -247,6 +247,7 @@
             this.btnEliminarArticulo.TabIndex = 0;
             this.btnEliminarArticulo.Text = "Artículos";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
             // Principal
             // 
@@ -264,6 +265,7 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.grbListas.ResumeLayout(false);
             this.grbAgregar.ResumeLayout(false);
             this.grbModificar.ResumeLayout(false);

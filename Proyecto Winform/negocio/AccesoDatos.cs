@@ -1,9 +1,10 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
 namespace negocio
 {
@@ -19,7 +20,7 @@ namespace negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!");
             comando = new SqlCommand();
         }
 
@@ -65,6 +66,12 @@ namespace negocio
                 lector.Close();
             conexion.Close();              
         }
-       
+
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
+
     }
 }

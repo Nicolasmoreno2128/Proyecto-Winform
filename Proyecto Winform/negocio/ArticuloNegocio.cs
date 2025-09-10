@@ -17,8 +17,9 @@ namespace negocio
             SqlCommand comando = new SqlCommand();        //Declaro y creo objeto comando para realizar acciones con la conexion  
             SqlDataReader lector;
             try
-            {
-                conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
+            {   // Lineas 21 y 22, diferentes forma de conectar con la base de datos (Comentar y descomentar la que les funcione)
+                //conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
+                conexion.ConnectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
                 comando.Connection = conexion;

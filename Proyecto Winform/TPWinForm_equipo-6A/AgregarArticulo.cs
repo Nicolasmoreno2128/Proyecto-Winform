@@ -34,10 +34,29 @@ namespace TPWinForm_equipo_6A
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
+                articulo.Categoria = (Categoria)cbbCategoria.SelectedItem;
+                articulo.Marca = (Marca)cbbMarca.SelectedItem;
 
                 negocio.agregar(articulo);
                 MessageBox.Show("Se agrego correctamente");
                 Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void AgregarArticulo_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+
+            try
+            {
+                cbbCategoria.DataSource = categoriaNegocio.Listar();
+                cbbMarca.DataSource = marcaNegocio.Listar();
             }
             catch (Exception ex)
             {

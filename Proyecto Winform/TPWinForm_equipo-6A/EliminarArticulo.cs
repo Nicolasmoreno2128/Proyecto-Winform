@@ -66,6 +66,5 @@ namespace TPWinForm_equipo_6A
                 MessageBox.Show(ex.ToString());
             }
         }
-
     }
 }

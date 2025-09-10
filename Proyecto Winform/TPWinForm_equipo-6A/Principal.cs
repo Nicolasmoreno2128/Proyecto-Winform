@@ -65,5 +65,11 @@ namespace TPWinForm_equipo_6A
         {
 
         }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            frmEliminarCategoria eliminarCategoria = new frmEliminarCategoria();
+            eliminarCategoria.ShowDialog();
+        }
     }
 }

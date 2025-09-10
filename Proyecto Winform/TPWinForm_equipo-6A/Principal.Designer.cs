@@ -40,6 +40,7 @@
             this.btbAgregarArticulo = new System.Windows.Forms.Button();
             this.lblTituloModificar = new System.Windows.Forms.Label();
             this.grbModificar = new System.Windows.Forms.GroupBox();
+            this.btnListarArticulos = new System.Windows.Forms.Button();
             this.btnModificarCategoria = new System.Windows.Forms.Button();
             this.btbModificararticulo = new System.Windows.Forms.Button();
             this.lblTituloEliminar = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
-            this.btnListarArticulos = new System.Windows.Forms.Button();
             this.grbListas.SuspendLayout();
             this.grbAgregar.SuspendLayout();
             this.grbModificar.SuspendLayout();
@@ -173,6 +173,16 @@
             this.grbModificar.TabIndex = 4;
             this.grbModificar.TabStop = false;
             // 
+            // btnListarArticulos
+            // 
+            this.btnListarArticulos.Location = new System.Drawing.Point(6, 30);
+            this.btnListarArticulos.Name = "btnListarArticulos";
+            this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
+            this.btnListarArticulos.TabIndex = 3;
+            this.btnListarArticulos.Text = "Listar Articulos";
+            this.btnListarArticulos.UseVisualStyleBackColor = true;
+            this.btnListarArticulos.Click += new System.EventHandler(this.btnListarArticulos_Click);
+            // 
             // btnModificarCategoria
             // 
             this.btnModificarCategoria.Location = new System.Drawing.Point(177, 30);
@@ -230,6 +240,7 @@
             this.btnEliminarCategoria.TabIndex = 1;
             this.btnEliminarCategoria.Text = "Categorias";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
             // btnEliminarArticulo
             // 
@@ -240,16 +251,6 @@
             this.btnEliminarArticulo.Text = "Artículos";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
-            // 
-            // btnListarArticulos
-            // 
-            this.btnListarArticulos.Location = new System.Drawing.Point(6, 30);
-            this.btnListarArticulos.Name = "btnListarArticulos";
-            this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
-            this.btnListarArticulos.TabIndex = 3;
-            this.btnListarArticulos.Text = "Listar Articulos";
-            this.btnListarArticulos.UseVisualStyleBackColor = true;
-            this.btnListarArticulos.Click += new System.EventHandler(this.btnListarArticulos_Click);
             // 
             // Principal
             // 

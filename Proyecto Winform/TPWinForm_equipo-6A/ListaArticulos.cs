@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,37 @@ namespace TPWinForm_equipo_6A
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
             dgvListaArticulos.DataSource = articulo.listar();
+        }
+
+        private void dgvListaArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btbAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarArticulo))
+                    return;
+            }
+            AgregarArticulo alta = new AgregarArticulo();
+            alta.ShowDialog();
+        }
+
+        private void btbModificararticulo_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado=(Articulo)dgvListaArticulos.CurrentRow.DataBoundItem;
+
+            ModificarArticulo modificar = new ModificarArticulo(seleccionado);
+            modificar.ShowDialog();
+        }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            frmEliminarArticulo eliminar = new frmEliminarArticulo();
+            eliminar.ShowDialog();
         }
     }
 }

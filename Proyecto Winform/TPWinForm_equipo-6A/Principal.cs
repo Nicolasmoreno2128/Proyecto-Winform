@@ -49,5 +49,21 @@ namespace TPWinForm_equipo_6A
         {
 
         }
+
+        private void btnListarArticulos_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ListaArticulos))
+                    return;
+            }
+            ListaArticulos ventana3 = new ListaArticulos();
+            ventana3.ShowDialog();
+        }
+
+        private void btbModificararticulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

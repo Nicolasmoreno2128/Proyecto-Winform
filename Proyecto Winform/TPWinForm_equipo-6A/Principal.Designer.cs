@@ -40,7 +40,6 @@
             this.btbAgregarArticulo = new System.Windows.Forms.Button();
             this.lblTituloModificar = new System.Windows.Forms.Label();
             this.grbModificar = new System.Windows.Forms.GroupBox();
-            this.btbModificarMarca = new System.Windows.Forms.Button();
             this.btnModificarCategoria = new System.Windows.Forms.Button();
             this.btbModificararticulo = new System.Windows.Forms.Button();
             this.lblTituloEliminar = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnListarArticulos = new System.Windows.Forms.Button();
             this.grbListas.SuspendLayout();
             this.grbAgregar.SuspendLayout();
             this.grbModificar.SuspendLayout();
@@ -164,27 +164,18 @@
             // 
             // grbModificar
             // 
-            this.grbModificar.Controls.Add(this.btbModificarMarca);
+            this.grbModificar.Controls.Add(this.btnListarArticulos);
             this.grbModificar.Controls.Add(this.btnModificarCategoria);
             this.grbModificar.Controls.Add(this.btbModificararticulo);
             this.grbModificar.Location = new System.Drawing.Point(17, 291);
             this.grbModificar.Name = "grbModificar";
-            this.grbModificar.Size = new System.Drawing.Size(252, 60);
+            this.grbModificar.Size = new System.Drawing.Size(396, 88);
             this.grbModificar.TabIndex = 4;
             this.grbModificar.TabStop = false;
             // 
-            // btbModificarMarca
-            // 
-            this.btbModificarMarca.Location = new System.Drawing.Point(168, 19);
-            this.btbModificarMarca.Name = "btbModificarMarca";
-            this.btbModificarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btbModificarMarca.TabIndex = 2;
-            this.btbModificarMarca.Text = "Marcas";
-            this.btbModificarMarca.UseVisualStyleBackColor = true;
-            // 
             // btnModificarCategoria
             // 
-            this.btnModificarCategoria.Location = new System.Drawing.Point(87, 19);
+            this.btnModificarCategoria.Location = new System.Drawing.Point(177, 30);
             this.btnModificarCategoria.Name = "btnModificarCategoria";
             this.btnModificarCategoria.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCategoria.TabIndex = 1;
@@ -193,12 +184,13 @@
             // 
             // btbModificararticulo
             // 
-            this.btbModificararticulo.Location = new System.Drawing.Point(6, 19);
+            this.btbModificararticulo.Location = new System.Drawing.Point(96, 30);
             this.btbModificararticulo.Name = "btbModificararticulo";
             this.btbModificararticulo.Size = new System.Drawing.Size(75, 23);
             this.btbModificararticulo.TabIndex = 0;
             this.btbModificararticulo.Text = "Artículos";
             this.btbModificararticulo.UseVisualStyleBackColor = true;
+            this.btbModificararticulo.Click += new System.EventHandler(this.btbModificararticulo_Click);
             // 
             // lblTituloEliminar
             // 
@@ -249,6 +241,16 @@
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
+            // btnListarArticulos
+            // 
+            this.btnListarArticulos.Location = new System.Drawing.Point(6, 30);
+            this.btnListarArticulos.Name = "btnListarArticulos";
+            this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
+            this.btnListarArticulos.TabIndex = 3;
+            this.btnListarArticulos.Text = "Listar Articulos";
+            this.btnListarArticulos.UseVisualStyleBackColor = true;
+            this.btnListarArticulos.Click += new System.EventHandler(this.btnListarArticulos_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +291,6 @@
         private System.Windows.Forms.Button btbAgregarArticulo;
         private System.Windows.Forms.Label lblTituloModificar;
         private System.Windows.Forms.GroupBox grbModificar;
-        private System.Windows.Forms.Button btbModificarMarca;
         private System.Windows.Forms.Button btnModificarCategoria;
         private System.Windows.Forms.Button btbModificararticulo;
         private System.Windows.Forms.Label lblTituloEliminar;
@@ -297,5 +298,6 @@
         private System.Windows.Forms.Button btnEliminarMarca;
         private System.Windows.Forms.Button btnEliminarCategoria;
         private System.Windows.Forms.Button btnEliminarArticulo;
+        private System.Windows.Forms.Button btnListarArticulos;
     }
 }

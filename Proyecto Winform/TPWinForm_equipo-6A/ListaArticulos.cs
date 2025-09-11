@@ -23,12 +23,7 @@ namespace TPWinForm_equipo_6A
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
             dgvListaArticulos.DataSource = articulo.listar();
-        }
-
-        private void dgvListaArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        }               
 
         private void btbAgregarArticulo_Click(object sender, EventArgs e)
         {
@@ -54,6 +49,6 @@ namespace TPWinForm_equipo_6A
         {
             frmEliminarArticulo eliminar = new frmEliminarArticulo();
             eliminar.ShowDialog();
-        }
+        }        
     }
 }

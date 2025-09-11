@@ -45,7 +45,6 @@
             this.dgvListaArticulos.Name = "dgvListaArticulos";
             this.dgvListaArticulos.Size = new System.Drawing.Size(691, 190);
             this.dgvListaArticulos.TabIndex = 1;
-            this.dgvListaArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaArticulos_CellContentClick);
             // 
             // lblListaArticulos
             // 

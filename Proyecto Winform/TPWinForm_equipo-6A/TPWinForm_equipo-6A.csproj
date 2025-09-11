@@ -70,6 +70,18 @@
     <Compile Include="ListaArticulos.Designer.cs">
       <DependentUpon>ListaArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCategorias.Designer.cs">
+      <DependentUpon>ListaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMarcas.Designer.cs">
+      <DependentUpon>ListaMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListaArticulos.resx">
       <DependentUpon>ListaArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaCategorias.resx">
+      <DependentUpon>ListaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMarcas.resx">
+      <DependentUpon>ListaMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.cs</DependentUpon>

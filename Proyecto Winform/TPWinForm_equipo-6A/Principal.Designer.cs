@@ -48,6 +48,7 @@
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnModificarMarca = new System.Windows.Forms.Button();
             this.grbListas.SuspendLayout();
             this.grbAgregar.SuspendLayout();
             this.grbModificar.SuspendLayout();
@@ -73,6 +74,7 @@
             this.btnListaMarcas.TabIndex = 2;
             this.btnListaMarcas.Text = "Marcas";
             this.btnListaMarcas.UseVisualStyleBackColor = true;
+            this.btnListaMarcas.Click += new System.EventHandler(this.btnListaMarcas_Click);
             // 
             // btnListaCategorias
             // 
@@ -82,6 +84,7 @@
             this.btnListaCategorias.TabIndex = 1;
             this.btnListaCategorias.Text = "Categorias";
             this.btnListaCategorias.UseVisualStyleBackColor = true;
+            this.btnListaCategorias.Click += new System.EventHandler(this.btnListaCategorias_Click);
             // 
             // btnListaArticulos
             // 
@@ -164,6 +167,7 @@
             // 
             // grbModificar
             // 
+            this.grbModificar.Controls.Add(this.btnModificarMarca);
             this.grbModificar.Controls.Add(this.btnListarArticulos);
             this.grbModificar.Controls.Add(this.btnModificarCategoria);
             this.grbModificar.Controls.Add(this.btbModificararticulo);
@@ -175,7 +179,7 @@
             // 
             // btnListarArticulos
             // 
-            this.btnListarArticulos.Location = new System.Drawing.Point(6, 30);
+            this.btnListarArticulos.Location = new System.Drawing.Point(298, 30);
             this.btnListarArticulos.Name = "btnListarArticulos";
             this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
             this.btnListarArticulos.TabIndex = 3;
@@ -185,7 +189,7 @@
             // 
             // btnModificarCategoria
             // 
-            this.btnModificarCategoria.Location = new System.Drawing.Point(177, 30);
+            this.btnModificarCategoria.Location = new System.Drawing.Point(87, 30);
             this.btnModificarCategoria.Name = "btnModificarCategoria";
             this.btnModificarCategoria.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCategoria.TabIndex = 1;
@@ -194,7 +198,7 @@
             // 
             // btbModificararticulo
             // 
-            this.btbModificararticulo.Location = new System.Drawing.Point(96, 30);
+            this.btbModificararticulo.Location = new System.Drawing.Point(6, 30);
             this.btbModificararticulo.Name = "btbModificararticulo";
             this.btbModificararticulo.Size = new System.Drawing.Size(75, 23);
             this.btbModificararticulo.TabIndex = 0;
@@ -252,6 +256,15 @@
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
+            // btnModificarMarca
+            // 
+            this.btnModificarMarca.Location = new System.Drawing.Point(168, 30);
+            this.btnModificarMarca.Name = "btnModificarMarca";
+            this.btnModificarMarca.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarMarca.TabIndex = 8;
+            this.btnModificarMarca.Text = "Marcas";
+            this.btnModificarMarca.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,5 +313,6 @@
         private System.Windows.Forms.Button btnEliminarCategoria;
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnListarArticulos;
+        private System.Windows.Forms.Button btnModificarMarca;
     }
 }

@@ -71,5 +71,27 @@ namespace TPWinForm_equipo_6A
             frmEliminarCategoria eliminarCategoria = new frmEliminarCategoria();
             eliminarCategoria.ShowDialog();
         }
+
+        private void btnListaCategorias_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ListaCategorias))
+                    return;
+            }
+            ListaCategorias ventana = new ListaCategorias();
+            ventana.ShowDialog();
+        }
+
+        private void btnListaMarcas_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ListaMarcas))
+                    return;
+            }
+            ListaMarcas ventana = new ListaMarcas();
+            ventana.ShowDialog();
+        }
     }
 }

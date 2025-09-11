@@ -93,5 +93,27 @@ namespace TPWinForm_equipo_6A
             ListaMarcas ventana = new ListaMarcas();
             ventana.ShowDialog();
         }
+
+        private void btbAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarCategoria))
+                    return;
+            }
+            AgregarCategoria alta = new AgregarCategoria();
+            alta.ShowDialog();
+        }
+
+        private void btbAgregarMarca_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarMarcas))
+                    return;
+            }
+            AgregarMarcas alta = new AgregarMarcas();
+            alta.ShowDialog();
+        }
     }
 }

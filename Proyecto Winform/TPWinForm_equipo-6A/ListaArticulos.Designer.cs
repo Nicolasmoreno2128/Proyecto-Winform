@@ -33,7 +33,15 @@
             this.btbAgregarArticulo = new System.Windows.Forms.Button();
             this.btbModificararticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.numFiltro = new System.Windows.Forms.NumericUpDown();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.cbxCriterio = new System.Windows.Forms.ComboBox();
+            this.lblCriterio = new System.Windows.Forms.Label();
+            this.lblCampo = new System.Windows.Forms.Label();
+            this.cbxCampo = new System.Windows.Forms.ComboBox();
+            this.lblFiltro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFiltro)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaArticulos
@@ -87,11 +95,78 @@
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
+            // numFiltro
+            // 
+            this.numFiltro.Location = new System.Drawing.Point(484, 283);
+            this.numFiltro.Name = "numFiltro";
+            this.numFiltro.Size = new System.Drawing.Size(120, 20);
+            this.numFiltro.TabIndex = 20;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(637, 281);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 19;
+            this.btnFiltrar.Text = "Buscar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // cbxCriterio
+            // 
+            this.cbxCriterio.FormattingEnabled = true;
+            this.cbxCriterio.Location = new System.Drawing.Point(294, 281);
+            this.cbxCriterio.Name = "cbxCriterio";
+            this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cbxCriterio.TabIndex = 18;
+            // 
+            // lblCriterio
+            // 
+            this.lblCriterio.AutoSize = true;
+            this.lblCriterio.Location = new System.Drawing.Point(246, 289);
+            this.lblCriterio.Name = "lblCriterio";
+            this.lblCriterio.Size = new System.Drawing.Size(42, 13);
+            this.lblCriterio.TabIndex = 17;
+            this.lblCriterio.Text = "Criterio:";
+            // 
+            // lblCampo
+            // 
+            this.lblCampo.AutoSize = true;
+            this.lblCampo.Location = new System.Drawing.Point(60, 289);
+            this.lblCampo.Name = "lblCampo";
+            this.lblCampo.Size = new System.Drawing.Size(43, 13);
+            this.lblCampo.TabIndex = 16;
+            this.lblCampo.Text = "Campo:";
+            // 
+            // cbxCampo
+            // 
+            this.cbxCampo.FormattingEnabled = true;
+            this.cbxCampo.Location = new System.Drawing.Point(109, 281);
+            this.cbxCampo.Name = "cbxCampo";
+            this.cbxCampo.Size = new System.Drawing.Size(121, 21);
+            this.cbxCampo.TabIndex = 15;
+            // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Location = new System.Drawing.Point(442, 289);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(35, 13);
+            this.lblFiltro.TabIndex = 14;
+            this.lblFiltro.Text = "Filtrar:";
+            // 
             // ListaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numFiltro);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.cbxCriterio);
+            this.Controls.Add(this.lblCriterio);
+            this.Controls.Add(this.lblCampo);
+            this.Controls.Add(this.cbxCampo);
+            this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btbModificararticulo);
             this.Controls.Add(this.btbAgregarArticulo);
@@ -102,6 +177,7 @@
             this.Text = "ListaArticulos";
             this.Load += new System.EventHandler(this.ListaArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFiltro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +190,12 @@
         private System.Windows.Forms.Button btbAgregarArticulo;
         private System.Windows.Forms.Button btbModificararticulo;
         private System.Windows.Forms.Button btnEliminarArticulo;
+        private System.Windows.Forms.NumericUpDown numFiltro;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.ComboBox cbxCriterio;
+        private System.Windows.Forms.Label lblCriterio;
+        private System.Windows.Forms.Label lblCampo;
+        private System.Windows.Forms.ComboBox cbxCampo;
+        private System.Windows.Forms.Label lblFiltro;
     }
 }

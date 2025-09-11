@@ -18,8 +18,8 @@ namespace negocio
             SqlDataReader lector;
             try
             {   // Lineas 21 y 22, diferentes forma de conectar con la base de datos (Comentar y descomentar la que les funcione)
-                //conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
-                conexion.ConnectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
+                //conexion.ConnectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
                 comando.Connection = conexion;
@@ -86,6 +86,66 @@ namespace negocio
 
                 throw ex;
             }
+        }
+
+        public List<Articulo> Filtrar(string campo, string criterio, int filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            string consulta = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND ";
+
+            if (campo == "Id")
+            {
+                switch (criterio)
+                {
+                    case "Mayor a":
+                        consulta += "A.Id >" + filtro;
+                        break;
+                    case "Menor a":
+                        consulta += "A.Id <" + filtro;
+                        break;
+                    case "Igual a":
+                        consulta += "A.Id =" + filtro;
+                        break;
+                }
+            }
+            else
+            {
+                switch (criterio)
+                {
+                    case "Mayor a":
+                        consulta += "Precio > " + filtro;
+                        break;
+                    case "Menor a":
+                        consulta += "Precio < " + filtro;
+                        break;
+                    case "Igual a":
+                        consulta += "Precio = " + filtro;
+                        break;
+                }
+
+
+            }
+            datos.setearConsulta(consulta);
+            datos.ejecutarLectura();
+
+            while (datos.Lector.Read())
+            {
+                Articulo aux = new Articulo();
+                aux.Id = (int)datos.Lector["Id"];
+                aux.Codigo = (string)datos.Lector["Codigo"];
+                aux.Nombre = (string)datos.Lector["Nombre"];
+                aux.Descripcion = (string)datos.Lector["descripcion"];
+                aux.Precio = (decimal)datos.Lector["precio"];
+                aux.Marca = new Marca();
+                aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                aux.Categoria = new Categoria();
+                aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+
+                lista.Add(aux);
+            }
+            return lista;
+
         }
 
     }

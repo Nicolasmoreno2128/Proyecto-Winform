@@ -23,6 +23,11 @@ namespace TPWinForm_equipo_6A
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
             dgvListaArticulos.DataSource = articulo.listar();
+            cbxCampo.Items.Add("Id");
+            cbxCampo.Items.Add("Precio");
+            cbxCriterio.Items.Add("Mayor a");
+            cbxCriterio.Items.Add("Menor a");
+            cbxCriterio.Items.Add("Igual a");
         }               
 
         private void btbAgregarArticulo_Click(object sender, EventArgs e)
@@ -49,6 +54,25 @@ namespace TPWinForm_equipo_6A
         {
             frmEliminarArticulo eliminar = new frmEliminarArticulo();
             eliminar.ShowDialog();
-        }        
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                string campo = cbxCampo.SelectedItem.ToString();
+                string criterio = cbxCriterio.SelectedItem.ToString();
+                int filtro = (int)numFiltro.Value;
+                dgvListaArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

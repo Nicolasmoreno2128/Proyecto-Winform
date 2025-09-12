@@ -31,6 +31,7 @@
             this.dgvListaCategoria = new System.Windows.Forms.DataGridView();
             this.lblListaCategorias = new System.Windows.Forms.Label();
             this.btbCerrar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,22 @@
             this.btbCerrar.UseVisualStyleBackColor = true;
             this.btbCerrar.Click += new System.EventHandler(this.btbCerrar_Click);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(115, 311);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // ListaCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(322, 356);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btbCerrar);
             this.Controls.Add(this.lblListaCategorias);
             this.Controls.Add(this.dgvListaCategoria);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.DataGridView dgvListaCategoria;
         private System.Windows.Forms.Label lblListaCategorias;
         private System.Windows.Forms.Button btbCerrar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

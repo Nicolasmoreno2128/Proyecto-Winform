@@ -30,6 +30,13 @@ namespace TPWinForm_equipo_6A
             Close();
         }
 
-        
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionado;
+            seleccionado = (Categoria)dgvListaCategoria.CurrentRow.DataBoundItem;
+
+            ModificarCategoria modificar = new ModificarCategoria(seleccionado);
+            modificar.ShowDialog();
+        }
     }
 }

@@ -74,5 +74,10 @@ namespace TPWinForm_equipo_6A
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

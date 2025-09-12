@@ -40,6 +40,7 @@
             this.lblCampo = new System.Windows.Forms.Label();
             this.cbxCampo = new System.Windows.Forms.ComboBox();
             this.lblFiltro = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFiltro)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             this.dgvListaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaArticulos.Location = new System.Drawing.Point(57, 60);
             this.dgvListaArticulos.Name = "dgvListaArticulos";
-            this.dgvListaArticulos.Size = new System.Drawing.Size(691, 190);
+            this.dgvListaArticulos.Size = new System.Drawing.Size(775, 190);
             this.dgvListaArticulos.TabIndex = 1;
             // 
             // lblListaArticulos
@@ -155,11 +156,22 @@
             this.lblFiltro.TabIndex = 14;
             this.lblFiltro.Text = "Filtrar:";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(757, 355);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 21;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // ListaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.numFiltro);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.cbxCriterio);
@@ -172,6 +184,8 @@
             this.Controls.Add(this.btbAgregarArticulo);
             this.Controls.Add(this.lblListaArticulos);
             this.Controls.Add(this.dgvListaArticulos);
+            this.MaximumSize = new System.Drawing.Size(900, 489);
+            this.MinimumSize = new System.Drawing.Size(900, 489);
             this.Name = "ListaArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaArticulos";
@@ -197,5 +211,6 @@
         private System.Windows.Forms.Label lblCampo;
         private System.Windows.Forms.ComboBox cbxCampo;
         private System.Windows.Forms.Label lblFiltro;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

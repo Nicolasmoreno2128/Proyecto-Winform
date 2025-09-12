@@ -115,5 +115,10 @@ namespace TPWinForm_equipo_6A
             AgregarMarcas alta = new AgregarMarcas();
             alta.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

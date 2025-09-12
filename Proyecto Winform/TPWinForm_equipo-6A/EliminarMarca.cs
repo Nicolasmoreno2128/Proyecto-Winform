@@ -12,35 +12,35 @@ using System.Windows.Forms;
 
 namespace TPWinForm_equipo_6A
 {
-    public partial class frmEliminarCategoria : Form
+    public partial class frmEliminarMarca : Form
     {
-        public frmEliminarCategoria()
+        public frmEliminarMarca()
         {
             InitializeComponent();
         }
 
-        private void frmEliminarCategoria_Load(object sender, EventArgs e)
-        {
-            CategoriaNegocio categoria = new CategoriaNegocio();
-            dgvCategorias.DataSource = categoria.Listar();
-        }
-
-        private void btnCancelarElimCat_Click(object sender, EventArgs e)
+        private void btnCancelarElimMar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        private void EliminarMarca_Load(object sender, EventArgs e)
         {
-            CategoriaNegocio negocio = new CategoriaNegocio();
-            Categoria eliminado;
+            MarcaNegocio marca = new MarcaNegocio();
+            dgvMarcas.DataSource = marca.Listar();
+        }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marca eliminado;
             try
             {
                 DialogResult respuesta = MessageBox.Show("Estas seguro que queres eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
-                    eliminado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
-                    negocio.eliminarCategoria(eliminado.Id);
+                    eliminado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    negocio.EliminarMarca(eliminado.Id);
                     cargar();
                     MessageBox.Show("Eliminado correctamente");
                     Close();
@@ -59,7 +59,7 @@ namespace TPWinForm_equipo_6A
             CategoriaNegocio negocio = new CategoriaNegocio();
             try
             {
-                dgvCategorias.DataSource = negocio.Listar();
+                dgvMarcas.DataSource = negocio.Listar();
 
             }
             catch (Exception ex)

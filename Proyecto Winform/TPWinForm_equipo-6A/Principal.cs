@@ -120,5 +120,11 @@ namespace TPWinForm_equipo_6A
         {
             Close();
         }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+             frmEliminarMarca eliminarMarca = new frmEliminarMarca();
+            eliminarMarca.ShowDialog();
+        }
     }
 }

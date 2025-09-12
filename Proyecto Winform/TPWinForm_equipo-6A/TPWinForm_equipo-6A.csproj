@@ -76,6 +76,12 @@
     <Compile Include="EliminarCategoria.Designer.cs">
       <DependentUpon>EliminarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarMarca.Designer.cs">
+      <DependentUpon>EliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarCategoria.resx">
       <DependentUpon>EliminarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarMarca.resx">
+      <DependentUpon>EliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaArticulos.resx">
       <DependentUpon>ListaArticulos.cs</DependentUpon>

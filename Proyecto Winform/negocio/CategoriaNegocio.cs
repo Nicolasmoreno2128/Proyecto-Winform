@@ -57,7 +57,7 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-        public void eliminarRegistro(int id)
+        public void eliminarCategoria(int id)
         {
             try
             {

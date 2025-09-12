@@ -89,6 +89,7 @@
             this.btnCancelarModArticulo.TabIndex = 27;
             this.btnCancelarModArticulo.Text = "Cancelar";
             this.btnCancelarModArticulo.UseVisualStyleBackColor = true;
+            this.btnCancelarModArticulo.Click += new System.EventHandler(this.btnCancelarModArticulo_Click);
             // 
             // btnModArticulo
             // 
@@ -98,6 +99,7 @@
             this.btnModArticulo.TabIndex = 26;
             this.btnModArticulo.Text = "Modificar";
             this.btnModArticulo.UseVisualStyleBackColor = true;
+            this.btnModArticulo.Click += new System.EventHandler(this.btnModArticulo_Click);
             // 
             // lvlModArticulo
             // 

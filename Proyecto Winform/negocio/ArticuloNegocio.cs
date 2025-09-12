@@ -21,7 +21,9 @@ namespace negocio
                 //conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
                 conexion.ConnectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
+                //comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
+                //Prueba listar con id Marca y id Categoria
+                comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria,a.IdMarca,a.IdCategoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -36,8 +38,10 @@ namespace negocio
                     aux.Descripcion = (string)lector["descripcion"];
                     aux.Precio = (decimal)lector["precio"];
                     aux.Marca = new Marca();
+                    aux.Marca.Id = (int)lector["IdMarca"]; //Se agrega linea para traer el id.Marca (Modificar art)
                     aux.Marca.Descripcion = (string)lector["Marca"];
                     aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)lector["IdCategoria"];//Se agrega linea para traer el id.Categoria(modificar art)
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
 
                     lista.Add(aux);
@@ -140,6 +144,7 @@ namespace negocio
                 aux.Marca = new Marca();
                 aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                 aux.Categoria = new Categoria();
+
                 aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
                 lista.Add(aux);
@@ -147,6 +152,36 @@ namespace negocio
             return lista;
 
         }
+
+        public void Modificar(Articulo modificado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearConsulta("update ARTICULOS set Codigo = @codigo ,Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria=@idcategoria, Precio= @precio Where id = @id");
+                datos.setearParametro("@codigo", modificado.Codigo);
+                datos.setearParametro("@nombre", modificado.Nombre);
+                datos.setearParametro("@descripcion", modificado.Descripcion);
+                datos.setearParametro("@idmarca", modificado.Marca.Id);
+                datos.setearParametro("@idcategoria", modificado.Categoria.Id);
+                datos.setearParametro("@precio", modificado.Precio);
+                datos.setearParametro("@id", modificado.Id);
+                
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
 
     }
     }

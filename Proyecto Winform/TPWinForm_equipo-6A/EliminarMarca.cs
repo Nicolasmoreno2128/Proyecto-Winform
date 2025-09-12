@@ -56,7 +56,7 @@ namespace TPWinForm_equipo_6A
 
         private void cargar()
         {
-            CategoriaNegocio negocio = new CategoriaNegocio();
+            MarcaNegocio negocio = new MarcaNegocio();
             try
             {
                 dgvMarcas.DataSource = negocio.Listar();

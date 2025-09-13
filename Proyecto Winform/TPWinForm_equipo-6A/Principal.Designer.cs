@@ -40,7 +40,6 @@
             this.btbAgregarMarca = new System.Windows.Forms.Button();
             this.btbAgregarCategoria = new System.Windows.Forms.Button();
             this.btbAgregarArticulo = new System.Windows.Forms.Button();
-            this.btnListarArticulos = new System.Windows.Forms.Button();
             this.lblTituloEliminar = new System.Windows.Forms.Label();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
             this.btnEliminarImagen = new System.Windows.Forms.Button();
@@ -177,16 +176,6 @@
             this.btbAgregarArticulo.UseVisualStyleBackColor = true;
             this.btbAgregarArticulo.Click += new System.EventHandler(this.btbAgregarArticulo_Click);
             // 
-            // btnListarArticulos
-            // 
-            this.btnListarArticulos.Location = new System.Drawing.Point(185, 371);
-            this.btnListarArticulos.Name = "btnListarArticulos";
-            this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
-            this.btnListarArticulos.TabIndex = 3;
-            this.btnListarArticulos.Text = "Listar Articulos";
-            this.btnListarArticulos.UseVisualStyleBackColor = true;
-            this.btnListarArticulos.Click += new System.EventHandler(this.btnListarArticulos_Click);
-            // 
             // lblTituloEliminar
             // 
             this.lblTituloEliminar.AutoSize = true;
@@ -265,7 +254,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 461);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnListarArticulos);
             this.Controls.Add(this.lblTituloEliminar);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.lblTituloAgregar);
@@ -303,7 +291,6 @@
         private System.Windows.Forms.Button btnEliminarMarca;
         private System.Windows.Forms.Button btnEliminarCategoria;
         private System.Windows.Forms.Button btnEliminarArticulo;
-        private System.Windows.Forms.Button btnListarArticulos;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnImagenes;
         private System.Windows.Forms.Button btnAgregarImagen;

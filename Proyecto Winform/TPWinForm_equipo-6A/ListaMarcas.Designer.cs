@@ -31,6 +31,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblListaMarcas = new System.Windows.Forms.Label();
             this.dgvListaMarca = new System.Windows.Forms.DataGridView();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaMarca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +67,23 @@
             this.dgvListaMarca.Size = new System.Drawing.Size(224, 203);
             this.dgvListaMarca.TabIndex = 2;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnModificar.Location = new System.Drawing.Point(56, 301);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // ListaMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(322, 356);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dgvListaMarca);
             this.Controls.Add(this.lblListaMarcas);
             this.Controls.Add(this.btnCerrar);
@@ -91,5 +104,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblListaMarcas;
         private System.Windows.Forms.DataGridView dgvListaMarca;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

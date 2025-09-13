@@ -196,6 +196,7 @@
             this.Controls.Add(this.lblModNombreArticulo);
             this.Controls.Add(this.lblModCodigoArticulo);
             this.Name = "ModificarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar_Articulo";
             this.Load += new System.EventHandler(this.ModificarArticulo_Load);
             this.ResumeLayout(false);

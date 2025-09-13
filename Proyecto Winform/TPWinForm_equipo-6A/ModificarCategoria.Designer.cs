@@ -97,6 +97,7 @@
             this.Name = "ModificarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Categoria";
+            this.Load += new System.EventHandler(this.ModificarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

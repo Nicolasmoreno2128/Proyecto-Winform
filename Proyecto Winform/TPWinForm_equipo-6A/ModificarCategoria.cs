@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,6 +46,28 @@ namespace TPWinForm_equipo_6A
 
                 MessageBox.Show("Se Modifico correctamente");
                 Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void ModificarCategoria_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (categoria != null)
+                {
+
+                    txtDescripcion.Text = categoria.Descripcion;
+
+                }
+
+
+
             }
             catch (Exception ex)
             {

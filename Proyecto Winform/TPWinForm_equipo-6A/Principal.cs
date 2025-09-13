@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -125,6 +126,17 @@ namespace TPWinForm_equipo_6A
         {
             frmEliminarMarca eliminarMarca = new frmEliminarMarca();
             eliminarMarca.ShowDialog();
+        }
+
+        private void btnImagenes_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Imagenes))
+                    return;
+            }
+            Imagenes alta = new Imagenes();
+            alta.ShowDialog();
         }
     }
 }

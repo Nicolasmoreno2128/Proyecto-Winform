@@ -38,5 +38,7 @@ namespace TPWinForm_equipo_6A
             ModificarCategoria modificar = new ModificarCategoria(seleccionado);
             modificar.ShowDialog();
         }
+
+        
     }
 }

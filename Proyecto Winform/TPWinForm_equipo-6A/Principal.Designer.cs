@@ -50,10 +50,14 @@
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnImagenes = new System.Windows.Forms.Button();
+            this.grbImagenes = new System.Windows.Forms.GroupBox();
+            this.lblImagenes = new System.Windows.Forms.Label();
             this.grbListas.SuspendLayout();
             this.grbAgregar.SuspendLayout();
             this.grbModificar.SuspendLayout();
             this.grbEliminar.SuspendLayout();
+            this.grbImagenes.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbListas
@@ -279,11 +283,42 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnImagenes
+            // 
+            this.btnImagenes.Location = new System.Drawing.Point(87, 19);
+            this.btnImagenes.Name = "btnImagenes";
+            this.btnImagenes.Size = new System.Drawing.Size(75, 23);
+            this.btnImagenes.TabIndex = 9;
+            this.btnImagenes.Text = "Ver";
+            this.btnImagenes.UseVisualStyleBackColor = true;
+            this.btnImagenes.Click += new System.EventHandler(this.btnImagenes_Click);
+            // 
+            // grbImagenes
+            // 
+            this.grbImagenes.Controls.Add(this.btnImagenes);
+            this.grbImagenes.Location = new System.Drawing.Point(315, 49);
+            this.grbImagenes.Name = "grbImagenes";
+            this.grbImagenes.Size = new System.Drawing.Size(252, 54);
+            this.grbImagenes.TabIndex = 10;
+            this.grbImagenes.TabStop = false;
+            // 
+            // lblImagenes
+            // 
+            this.lblImagenes.AutoSize = true;
+            this.lblImagenes.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenes.Location = new System.Drawing.Point(311, 13);
+            this.lblImagenes.Name = "lblImagenes";
+            this.lblImagenes.Size = new System.Drawing.Size(102, 25);
+            this.lblImagenes.TabIndex = 11;
+            this.lblImagenes.Text = "Imagenes";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblImagenes);
+            this.Controls.Add(this.grbImagenes);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblTituloEliminar);
             this.Controls.Add(this.grbEliminar);
@@ -301,6 +336,7 @@
             this.grbAgregar.ResumeLayout(false);
             this.grbModificar.ResumeLayout(false);
             this.grbEliminar.ResumeLayout(false);
+            this.grbImagenes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +366,8 @@
         private System.Windows.Forms.Button btnListarArticulos;
         private System.Windows.Forms.Button btnModificarMarca;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnImagenes;
+        private System.Windows.Forms.GroupBox grbImagenes;
+        private System.Windows.Forms.Label lblImagenes;
     }
 }

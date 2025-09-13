@@ -58,8 +58,10 @@
             // 
             this.dgvMarcas.AccessibleName = "hola";
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMarcas.Location = new System.Drawing.Point(164, 98);
             this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMarcas.Size = new System.Drawing.Size(472, 184);
             this.dgvMarcas.TabIndex = 3;
             // 

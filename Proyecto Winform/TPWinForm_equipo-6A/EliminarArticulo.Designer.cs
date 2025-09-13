@@ -38,8 +38,10 @@
             // dgvEliminar
             // 
             this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvEliminar.Location = new System.Drawing.Point(123, 66);
             this.dgvEliminar.Name = "dgvEliminar";
+            this.dgvEliminar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEliminar.Size = new System.Drawing.Size(523, 204);
             this.dgvEliminar.TabIndex = 0;
             // 

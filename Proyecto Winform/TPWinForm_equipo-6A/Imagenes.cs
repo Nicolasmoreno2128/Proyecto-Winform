@@ -50,5 +50,6 @@ namespace TPWinForm_equipo_6A
         {
             Close();
         }
+
     }    
 }

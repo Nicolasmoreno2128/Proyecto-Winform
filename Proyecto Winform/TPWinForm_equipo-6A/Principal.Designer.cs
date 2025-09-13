@@ -282,6 +282,7 @@
             this.btnEliminarImagen.TabIndex = 3;
             this.btnEliminarImagen.Text = "Imágenes";
             this.btnEliminarImagen.UseVisualStyleBackColor = true;
+            this.btnEliminarImagen.Click += new System.EventHandler(this.btnEliminarImagen_Click);
             // 
             // btnEliminarMarca
             // 

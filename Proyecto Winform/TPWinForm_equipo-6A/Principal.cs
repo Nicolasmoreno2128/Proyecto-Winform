@@ -145,5 +145,11 @@ namespace TPWinForm_equipo_6A
             AgregarImagen alta = new AgregarImagen();
             alta.ShowDialog();
         }
+
+        private void btnEliminarImagen_Click(object sender, EventArgs e)
+        {
+            EliminarImagen eliminarImagen = new EliminarImagen();
+            eliminarImagen.ShowDialog();
+        }
     }
 }

@@ -36,9 +36,9 @@
             // 
             // btnCancelarElimMar
             // 
-            this.btnCancelarElimMar.Location = new System.Drawing.Point(433, 304);
+            this.btnCancelarElimMar.Location = new System.Drawing.Point(156, 232);
             this.btnCancelarElimMar.Name = "btnCancelarElimMar";
-            this.btnCancelarElimMar.Size = new System.Drawing.Size(160, 48);
+            this.btnCancelarElimMar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarElimMar.TabIndex = 5;
             this.btnCancelarElimMar.Text = "Cancelar";
             this.btnCancelarElimMar.UseVisualStyleBackColor = true;
@@ -46,9 +46,9 @@
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(231, 304);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(65, 232);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
-            this.btnEliminarMarca.Size = new System.Drawing.Size(150, 48);
+            this.btnEliminarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarMarca.TabIndex = 4;
             this.btnEliminarMarca.Text = "Eliminar Marca";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
@@ -59,22 +59,25 @@
             this.dgvMarcas.AccessibleName = "hola";
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcas.Location = new System.Drawing.Point(164, 98);
+            this.dgvMarcas.Location = new System.Drawing.Point(26, 33);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(472, 184);
+            this.dgvMarcas.Size = new System.Drawing.Size(258, 184);
             this.dgvMarcas.TabIndex = 3;
             // 
             // frmEliminarMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(319, 292);
             this.Controls.Add(this.btnCancelarElimMar);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.dgvMarcas);
+            this.MaximumSize = new System.Drawing.Size(335, 331);
+            this.MinimumSize = new System.Drawing.Size(335, 331);
             this.Name = "frmEliminarMarca";
-            this.Text = "EliminarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Eliminar Marca";
             this.Load += new System.EventHandler(this.EliminarMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);

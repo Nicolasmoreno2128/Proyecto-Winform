@@ -51,5 +51,13 @@ namespace TPWinForm_equipo_6A
             Close();
         }
 
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            Imagen seleccionado;
+            seleccionado = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+
+            ModificarImagenes modificar = new ModificarImagenes(seleccionado);
+            modificar.ShowDialog();
+        }
     }    
 }

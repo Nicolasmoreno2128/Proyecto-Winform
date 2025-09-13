@@ -74,5 +74,28 @@ namespace negocio
                 throw ex;
             }            
         }
+
+        public void ModificarImagen(Imagen imagen)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update IMAGENES set IdArticulo = @idArticulo, ImagenUrl = @imagenUrl where id = @id");
+                datos.setearParametro("@idArticulo", imagen.IdArticulo);
+                datos.setearParametro("@imagenUrl", imagen.ImagenUrl);
+                datos.setearParametro("@id", imagen.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
+
+
 }

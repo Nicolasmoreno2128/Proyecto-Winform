@@ -32,6 +32,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblListaImagenes = new System.Windows.Forms.Label();
             this.pboArticulo = new System.Windows.Forms.PictureBox();
+            this.BtnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImagenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboArticulo)).BeginInit();
             this.SuspendLayout();
@@ -80,11 +81,22 @@
             this.pboArticulo.TabIndex = 3;
             this.pboArticulo.TabStop = false;
             // 
+            // BtnModificar
+            // 
+            this.BtnModificar.Location = new System.Drawing.Point(544, 396);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(75, 23);
+            this.BtnModificar.TabIndex = 4;
+            this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
             // Imagenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 452);
+            this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.pboArticulo);
             this.Controls.Add(this.lblListaImagenes);
             this.Controls.Add(this.btnCerrar);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblListaImagenes;
         private System.Windows.Forms.PictureBox pboArticulo;
+        private System.Windows.Forms.Button BtnModificar;
     }
 }

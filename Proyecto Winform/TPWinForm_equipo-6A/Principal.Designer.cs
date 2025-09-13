@@ -29,47 +29,58 @@
         private void InitializeComponent()
         {
             this.grbListas = new System.Windows.Forms.GroupBox();
+            this.btnImagenes = new System.Windows.Forms.Button();
             this.btnListaMarcas = new System.Windows.Forms.Button();
             this.btnListaCategorias = new System.Windows.Forms.Button();
             this.btnListaArticulos = new System.Windows.Forms.Button();
             this.lblListas = new System.Windows.Forms.Label();
             this.lblTituloAgregar = new System.Windows.Forms.Label();
             this.grbAgregar = new System.Windows.Forms.GroupBox();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.btbAgregarMarca = new System.Windows.Forms.Button();
             this.btbAgregarCategoria = new System.Windows.Forms.Button();
             this.btbAgregarArticulo = new System.Windows.Forms.Button();
             this.lblTituloModificar = new System.Windows.Forms.Label();
             this.grbModificar = new System.Windows.Forms.GroupBox();
+            this.btnModificarImagen = new System.Windows.Forms.Button();
             this.btnModificarMarca = new System.Windows.Forms.Button();
-            this.btnListarArticulos = new System.Windows.Forms.Button();
             this.btnModificarCategoria = new System.Windows.Forms.Button();
             this.btbModificararticulo = new System.Windows.Forms.Button();
+            this.btnListarArticulos = new System.Windows.Forms.Button();
             this.lblTituloEliminar = new System.Windows.Forms.Label();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
+            this.btnEliminarImagen = new System.Windows.Forms.Button();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnImagenes = new System.Windows.Forms.Button();
-            this.grbImagenes = new System.Windows.Forms.GroupBox();
-            this.lblImagenes = new System.Windows.Forms.Label();
             this.grbListas.SuspendLayout();
             this.grbAgregar.SuspendLayout();
             this.grbModificar.SuspendLayout();
             this.grbEliminar.SuspendLayout();
-            this.grbImagenes.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbListas
             // 
+            this.grbListas.Controls.Add(this.btnImagenes);
             this.grbListas.Controls.Add(this.btnListaMarcas);
             this.grbListas.Controls.Add(this.btnListaCategorias);
             this.grbListas.Controls.Add(this.btnListaArticulos);
             this.grbListas.Location = new System.Drawing.Point(17, 49);
             this.grbListas.Name = "grbListas";
-            this.grbListas.Size = new System.Drawing.Size(252, 60);
+            this.grbListas.Size = new System.Drawing.Size(333, 60);
             this.grbListas.TabIndex = 0;
             this.grbListas.TabStop = false;
+            // 
+            // btnImagenes
+            // 
+            this.btnImagenes.Location = new System.Drawing.Point(249, 19);
+            this.btnImagenes.Name = "btnImagenes";
+            this.btnImagenes.Size = new System.Drawing.Size(75, 23);
+            this.btnImagenes.TabIndex = 9;
+            this.btnImagenes.Text = "Imágenes";
+            this.btnImagenes.UseVisualStyleBackColor = true;
+            this.btnImagenes.Click += new System.EventHandler(this.btnImagenes_Click);
             // 
             // btnListaMarcas
             // 
@@ -123,14 +134,25 @@
             // 
             // grbAgregar
             // 
+            this.grbAgregar.Controls.Add(this.btnAgregarImagen);
             this.grbAgregar.Controls.Add(this.btbAgregarMarca);
             this.grbAgregar.Controls.Add(this.btbAgregarCategoria);
             this.grbAgregar.Controls.Add(this.btbAgregarArticulo);
             this.grbAgregar.Location = new System.Drawing.Point(17, 165);
             this.grbAgregar.Name = "grbAgregar";
-            this.grbAgregar.Size = new System.Drawing.Size(252, 60);
+            this.grbAgregar.Size = new System.Drawing.Size(333, 60);
             this.grbAgregar.TabIndex = 2;
             this.grbAgregar.TabStop = false;
+            // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Location = new System.Drawing.Point(250, 19);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarImagen.TabIndex = 3;
+            this.btnAgregarImagen.Text = "Imágenes";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // btbAgregarMarca
             // 
@@ -174,38 +196,37 @@
             // 
             // grbModificar
             // 
+            this.grbModificar.Controls.Add(this.btnModificarImagen);
             this.grbModificar.Controls.Add(this.btnModificarMarca);
-            this.grbModificar.Controls.Add(this.btnListarArticulos);
             this.grbModificar.Controls.Add(this.btnModificarCategoria);
             this.grbModificar.Controls.Add(this.btbModificararticulo);
-            this.grbModificar.Location = new System.Drawing.Point(17, 291);
+            this.grbModificar.Location = new System.Drawing.Point(17, 299);
             this.grbModificar.Name = "grbModificar";
-            this.grbModificar.Size = new System.Drawing.Size(396, 88);
+            this.grbModificar.Size = new System.Drawing.Size(333, 60);
             this.grbModificar.TabIndex = 4;
             this.grbModificar.TabStop = false;
             // 
+            // btnModificarImagen
+            // 
+            this.btnModificarImagen.Location = new System.Drawing.Point(249, 19);
+            this.btnModificarImagen.Name = "btnModificarImagen";
+            this.btnModificarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarImagen.TabIndex = 9;
+            this.btnModificarImagen.Text = "Imágenes";
+            this.btnModificarImagen.UseVisualStyleBackColor = true;
+            // 
             // btnModificarMarca
             // 
-            this.btnModificarMarca.Location = new System.Drawing.Point(168, 30);
+            this.btnModificarMarca.Location = new System.Drawing.Point(168, 19);
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnModificarMarca.TabIndex = 8;
             this.btnModificarMarca.Text = "Marcas";
             this.btnModificarMarca.UseVisualStyleBackColor = true;
             // 
-            // btnListarArticulos
-            // 
-            this.btnListarArticulos.Location = new System.Drawing.Point(298, 30);
-            this.btnListarArticulos.Name = "btnListarArticulos";
-            this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
-            this.btnListarArticulos.TabIndex = 3;
-            this.btnListarArticulos.Text = "Listar Articulos";
-            this.btnListarArticulos.UseVisualStyleBackColor = true;
-            this.btnListarArticulos.Click += new System.EventHandler(this.btnListarArticulos_Click);
-            // 
             // btnModificarCategoria
             // 
-            this.btnModificarCategoria.Location = new System.Drawing.Point(87, 30);
+            this.btnModificarCategoria.Location = new System.Drawing.Point(87, 19);
             this.btnModificarCategoria.Name = "btnModificarCategoria";
             this.btnModificarCategoria.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCategoria.TabIndex = 1;
@@ -214,19 +235,28 @@
             // 
             // btbModificararticulo
             // 
-            this.btbModificararticulo.Location = new System.Drawing.Point(6, 30);
+            this.btbModificararticulo.Location = new System.Drawing.Point(6, 19);
             this.btbModificararticulo.Name = "btbModificararticulo";
             this.btbModificararticulo.Size = new System.Drawing.Size(75, 23);
             this.btbModificararticulo.TabIndex = 0;
             this.btbModificararticulo.Text = "Artículos";
             this.btbModificararticulo.UseVisualStyleBackColor = true;
-            this.btbModificararticulo.Click += new System.EventHandler(this.btbModificararticulo_Click);
+            // 
+            // btnListarArticulos
+            // 
+            this.btnListarArticulos.Location = new System.Drawing.Point(191, 495);
+            this.btnListarArticulos.Name = "btnListarArticulos";
+            this.btnListarArticulos.Size = new System.Drawing.Size(75, 38);
+            this.btnListarArticulos.TabIndex = 3;
+            this.btnListarArticulos.Text = "Listar Articulos";
+            this.btnListarArticulos.UseVisualStyleBackColor = true;
+            this.btnListarArticulos.Click += new System.EventHandler(this.btnListarArticulos_Click);
             // 
             // lblTituloEliminar
             // 
             this.lblTituloEliminar.AutoSize = true;
             this.lblTituloEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloEliminar.Location = new System.Drawing.Point(310, 125);
+            this.lblTituloEliminar.Location = new System.Drawing.Point(18, 385);
             this.lblTituloEliminar.Name = "lblTituloEliminar";
             this.lblTituloEliminar.Size = new System.Drawing.Size(85, 25);
             this.lblTituloEliminar.TabIndex = 7;
@@ -234,14 +264,24 @@
             // 
             // grbEliminar
             // 
+            this.grbEliminar.Controls.Add(this.btnEliminarImagen);
             this.grbEliminar.Controls.Add(this.btnEliminarMarca);
             this.grbEliminar.Controls.Add(this.btnEliminarCategoria);
             this.grbEliminar.Controls.Add(this.btnEliminarArticulo);
-            this.grbEliminar.Location = new System.Drawing.Point(315, 165);
+            this.grbEliminar.Location = new System.Drawing.Point(23, 425);
             this.grbEliminar.Name = "grbEliminar";
-            this.grbEliminar.Size = new System.Drawing.Size(252, 60);
+            this.grbEliminar.Size = new System.Drawing.Size(333, 60);
             this.grbEliminar.TabIndex = 6;
             this.grbEliminar.TabStop = false;
+            // 
+            // btnEliminarImagen
+            // 
+            this.btnEliminarImagen.Location = new System.Drawing.Point(249, 19);
+            this.btnEliminarImagen.Name = "btnEliminarImagen";
+            this.btnEliminarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarImagen.TabIndex = 3;
+            this.btnEliminarImagen.Text = "Imágenes";
+            this.btnEliminarImagen.UseVisualStyleBackColor = true;
             // 
             // btnEliminarMarca
             // 
@@ -275,7 +315,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(664, 356);
+            this.btnCerrar.Location = new System.Drawing.Point(281, 510);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 8;
@@ -283,43 +323,13 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnImagenes
-            // 
-            this.btnImagenes.Location = new System.Drawing.Point(87, 19);
-            this.btnImagenes.Name = "btnImagenes";
-            this.btnImagenes.Size = new System.Drawing.Size(75, 23);
-            this.btnImagenes.TabIndex = 9;
-            this.btnImagenes.Text = "Ver";
-            this.btnImagenes.UseVisualStyleBackColor = true;
-            this.btnImagenes.Click += new System.EventHandler(this.btnImagenes_Click);
-            // 
-            // grbImagenes
-            // 
-            this.grbImagenes.Controls.Add(this.btnImagenes);
-            this.grbImagenes.Location = new System.Drawing.Point(315, 49);
-            this.grbImagenes.Name = "grbImagenes";
-            this.grbImagenes.Size = new System.Drawing.Size(252, 54);
-            this.grbImagenes.TabIndex = 10;
-            this.grbImagenes.TabStop = false;
-            // 
-            // lblImagenes
-            // 
-            this.lblImagenes.AutoSize = true;
-            this.lblImagenes.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagenes.Location = new System.Drawing.Point(311, 13);
-            this.lblImagenes.Name = "lblImagenes";
-            this.lblImagenes.Size = new System.Drawing.Size(102, 25);
-            this.lblImagenes.TabIndex = 11;
-            this.lblImagenes.Text = "Imagenes";
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblImagenes);
-            this.Controls.Add(this.grbImagenes);
+            this.ClientSize = new System.Drawing.Size(408, 556);
             this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnListarArticulos);
             this.Controls.Add(this.lblTituloEliminar);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.lblTituloModificar);
@@ -328,6 +338,8 @@
             this.Controls.Add(this.grbAgregar);
             this.Controls.Add(this.lblListas);
             this.Controls.Add(this.grbListas);
+            this.MaximumSize = new System.Drawing.Size(424, 595);
+            this.MinimumSize = new System.Drawing.Size(424, 595);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -336,7 +348,6 @@
             this.grbAgregar.ResumeLayout(false);
             this.grbModificar.ResumeLayout(false);
             this.grbEliminar.ResumeLayout(false);
-            this.grbImagenes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +378,8 @@
         private System.Windows.Forms.Button btnModificarMarca;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnImagenes;
-        private System.Windows.Forms.GroupBox grbImagenes;
-        private System.Windows.Forms.Label lblImagenes;
+        private System.Windows.Forms.Button btnAgregarImagen;
+        private System.Windows.Forms.Button btnModificarImagen;
+        private System.Windows.Forms.Button btnEliminarImagen;
     }
 }

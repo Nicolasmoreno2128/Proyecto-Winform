@@ -61,11 +61,7 @@ namespace TPWinForm_equipo_6A
             ListaArticulos ventana3 = new ListaArticulos();
             ventana3.ShowDialog();
         }
-
-        private void btbModificararticulo_Click(object sender, EventArgs e)
-        {
-
-        }
+                
 
         private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
@@ -136,6 +132,17 @@ namespace TPWinForm_equipo_6A
                     return;
             }
             Imagenes alta = new Imagenes();
+            alta.ShowDialog();
+        }
+
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(AgregarImagen))
+                    return;
+            }
+            AgregarImagen alta = new AgregarImagen();
             alta.ShowDialog();
         }
     }

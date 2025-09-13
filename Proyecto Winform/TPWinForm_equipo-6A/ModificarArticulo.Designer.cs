@@ -195,7 +195,10 @@
             this.Controls.Add(this.lblModDescripcionArticulo);
             this.Controls.Add(this.lblModNombreArticulo);
             this.Controls.Add(this.lblModCodigoArticulo);
+            this.MaximumSize = new System.Drawing.Size(312, 489);
+            this.MinimumSize = new System.Drawing.Size(312, 489);
             this.Name = "ModificarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar_Articulo";
             this.Load += new System.EventHandler(this.ModificarArticulo_Load);
             this.ResumeLayout(false);

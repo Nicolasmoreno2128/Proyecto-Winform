@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,15 @@ namespace TPWinForm_equipo_6A
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
-        }        
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Marca seleccionado;
+            seleccionado = (Marca)dgvListaMarca.CurrentRow.DataBoundItem;
+
+            ModificarMarca modificar = new ModificarMarca(seleccionado);
+            modificar.ShowDialog();
+        }
     }
 }

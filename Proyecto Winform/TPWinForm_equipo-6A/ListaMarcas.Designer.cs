@@ -59,8 +59,10 @@
             // 
             this.dgvListaMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvListaMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvListaMarca.Location = new System.Drawing.Point(39, 64);
             this.dgvListaMarca.Name = "dgvListaMarca";
+            this.dgvListaMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaMarca.Size = new System.Drawing.Size(224, 203);
             this.dgvListaMarca.TabIndex = 2;
             // 

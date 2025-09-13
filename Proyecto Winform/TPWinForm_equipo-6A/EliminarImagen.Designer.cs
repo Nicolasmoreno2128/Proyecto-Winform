@@ -60,11 +60,12 @@
             // lblEliminarImagen
             // 
             this.lblEliminarImagen.AutoSize = true;
-            this.lblEliminarImagen.Location = new System.Drawing.Point(44, 27);
+            this.lblEliminarImagen.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarImagen.Location = new System.Drawing.Point(23, 21);
             this.lblEliminarImagen.Name = "lblEliminarImagen";
-            this.lblEliminarImagen.Size = new System.Drawing.Size(35, 13);
+            this.lblEliminarImagen.Size = new System.Drawing.Size(134, 21);
             this.lblEliminarImagen.TabIndex = 2;
-            this.lblEliminarImagen.Text = "label1";
+            this.lblEliminarImagen.Text = "Eliminar Imagen";
             // 
             // btnEliminar
             // 

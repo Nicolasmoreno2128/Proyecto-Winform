@@ -69,6 +69,7 @@
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCrear
             // 
@@ -82,15 +83,17 @@
             // 
             // ModificarMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(237, 248);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblAgregarMarca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
+            this.MaximumSize = new System.Drawing.Size(253, 287);
+            this.MinimumSize = new System.Drawing.Size(253, 287);
             this.Name = "ModificarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarMarca";
             this.Load += new System.EventHandler(this.ModificarMarca_Load);
             this.ResumeLayout(false);

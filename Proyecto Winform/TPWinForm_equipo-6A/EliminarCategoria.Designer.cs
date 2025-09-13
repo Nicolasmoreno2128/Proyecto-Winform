@@ -89,6 +89,7 @@
             this.MaximumSize = new System.Drawing.Size(335, 331);
             this.MinimumSize = new System.Drawing.Size(335, 331);
             this.Name = "frmEliminarCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EliminarCategoria";
             this.Load += new System.EventHandler(this.frmEliminarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();

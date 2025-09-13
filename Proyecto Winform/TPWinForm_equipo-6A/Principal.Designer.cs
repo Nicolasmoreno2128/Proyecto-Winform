@@ -343,7 +343,7 @@
             this.MinimumSize = new System.Drawing.Size(424, 595);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
+            this.Text = "Gestión de Artículos";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.grbListas.ResumeLayout(false);
             this.grbAgregar.ResumeLayout(false);

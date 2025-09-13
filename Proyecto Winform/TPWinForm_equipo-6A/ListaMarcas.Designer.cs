@@ -37,7 +37,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCerrar.Location = new System.Drawing.Point(188, 301);
+            this.btnCerrar.Location = new System.Drawing.Point(211, 300);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 0;
@@ -60,10 +60,10 @@
             this.dgvListaMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvListaMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvListaMarca.Location = new System.Drawing.Point(39, 64);
+            this.dgvListaMarca.Location = new System.Drawing.Point(39, 67);
             this.dgvListaMarca.Name = "dgvListaMarca";
             this.dgvListaMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaMarca.Size = new System.Drawing.Size(224, 203);
+            this.dgvListaMarca.Size = new System.Drawing.Size(247, 203);
             this.dgvListaMarca.TabIndex = 2;
             // 
             // ListaMarcas

@@ -40,10 +40,13 @@
             // dgvImagenes
             // 
             this.dgvImagenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImagenes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvImagenes.Location = new System.Drawing.Point(27, 58);
             this.dgvImagenes.Name = "dgvImagenes";
+            this.dgvImagenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvImagenes.Size = new System.Drawing.Size(328, 306);
             this.dgvImagenes.TabIndex = 0;
+            this.dgvImagenes.SelectionChanged += new System.EventHandler(this.dgvImagenes_SelectionChanged);
             // 
             // pboImagenes
             // 
@@ -53,8 +56,6 @@
             this.pboImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboImagenes.TabIndex = 1;
             this.pboImagenes.TabStop = false;
-            this.dgvImagenes.SelectionChanged += new System.EventHandler(this.dgvImagenes_SelectionChanged);
-
             // 
             // lblEliminarImagen
             // 

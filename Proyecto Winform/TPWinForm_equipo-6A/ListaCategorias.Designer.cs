@@ -43,7 +43,7 @@
             this.dgvListaCategoria.Location = new System.Drawing.Point(31, 71);
             this.dgvListaCategoria.Name = "dgvListaCategoria";
             this.dgvListaCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCategoria.Size = new System.Drawing.Size(240, 210);
+            this.dgvListaCategoria.Size = new System.Drawing.Size(256, 210);
             this.dgvListaCategoria.TabIndex = 0;
             // 
             // lblListaCategorias
@@ -62,7 +62,7 @@
             // btbCerrar
             // 
             this.btbCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btbCerrar.Location = new System.Drawing.Point(196, 311);
+            this.btbCerrar.Location = new System.Drawing.Point(212, 312);
             this.btbCerrar.Name = "btbCerrar";
             this.btbCerrar.Size = new System.Drawing.Size(75, 23);
             this.btbCerrar.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(115, 311);
+            this.btnModificar.Location = new System.Drawing.Point(131, 312);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 3;

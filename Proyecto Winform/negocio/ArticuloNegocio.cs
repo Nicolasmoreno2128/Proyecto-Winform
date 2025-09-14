@@ -13,48 +13,38 @@ namespace negocio
         public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();
-            SqlConnection conexion = new SqlConnection(); //Declaro y creo objeto conexion
-            SqlCommand comando = new SqlCommand();        //Declaro y creo objeto comando para realizar acciones con la conexion  
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
+
             try
-            {   // Lineas 21 y 22, diferentes forma de conectar con la base de datos (Comentar y descomentar la que les funcione)
-                //conexion.ConnectionString = "server=.\\localhost,1433; database=CATALOGO_P3_DB; integrated security=false; user=sa; password= Passw0rd2025!";
-                conexion.ConnectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                //comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
-                //Prueba listar con id Marca y id Categoria
-                comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria,a.IdMarca,a.IdCategoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
-                comando.Connection = conexion;
-
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                while (lector.Read())
+            {
+                datos.setearConsulta("SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria,a.IdMarca,a.IdCategoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id");
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Id = (int)lector["Id"];
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["descripcion"];
-                    aux.Precio = (decimal)lector["precio"];
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["descripcion"];
+                    aux.Precio = (decimal)datos.Lector["precio"];
                     aux.Marca = new Marca();
-                    aux.Marca.Id = (int)lector["IdMarca"]; //Se agrega linea para traer el id.Marca (Modificar art)
-                    aux.Marca.Descripcion = (string)lector["Marca"];
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"]; //Se agrega linea para traer el id.Marca (Modificar art)
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                     aux.Categoria = new Categoria();
-                    aux.Categoria.Id = (int)lector["IdCategoria"];//Se agrega linea para traer el id.Categoria(modificar art)
-                    aux.Categoria.Descripcion = (string)lector["Categoria"];
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];//Se agrega linea para traer el id.Categoria(modificar art)
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
                     lista.Add(aux);
                 }
+            return lista;
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
-            finally { conexion.Close(); }
+            finally { datos.cerrarConexion(); }
 
-            return lista;
         }
         public void agregar(Articulo nuevo)
         {

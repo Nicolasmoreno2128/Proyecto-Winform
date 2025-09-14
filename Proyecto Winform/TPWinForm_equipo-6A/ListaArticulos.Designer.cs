@@ -41,6 +41,7 @@
             this.cbxCampo = new System.Windows.Forms.ComboBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFiltro)).BeginInit();
             this.SuspendLayout();
@@ -178,11 +179,22 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnDetalle
+            // 
+            this.btnDetalle.Location = new System.Drawing.Point(413, 341);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(74, 37);
+            this.btnDetalle.TabIndex = 22;
+            this.btnDetalle.Text = "Ver Detalle";
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            // 
             // ListaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.numFiltro);
             this.Controls.Add(this.btnFiltrar);
@@ -224,5 +236,6 @@
         private System.Windows.Forms.ComboBox cbxCampo;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnDetalle;
     }
 }

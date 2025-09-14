@@ -99,5 +99,16 @@ namespace TPWinForm_equipo_6A
         {
             Close();
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            if (dgvListaArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvListaArticulos.CurrentRow.DataBoundItem;
+
+                frmDetalleArticulo detalle = new frmDetalleArticulo(seleccionado);
+                detalle.ShowDialog();
+            }
+        }
     }
 }

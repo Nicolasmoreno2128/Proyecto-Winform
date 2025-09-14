@@ -100,7 +100,17 @@
             // 
             // numFiltro
             // 
+            this.numFiltro.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numFiltro.Location = new System.Drawing.Point(484, 283);
+            this.numFiltro.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.numFiltro.Name = "numFiltro";
             this.numFiltro.Size = new System.Drawing.Size(120, 20);
             this.numFiltro.TabIndex = 20;

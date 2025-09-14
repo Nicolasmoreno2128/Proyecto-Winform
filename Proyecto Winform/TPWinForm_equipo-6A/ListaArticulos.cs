@@ -56,14 +56,34 @@ namespace TPWinForm_equipo_6A
             eliminar.ShowDialog();
         }
 
+        private bool ValidarFiltro()
+        {
+            if (cbxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione un campo para filtrar");
+                return true;
+            }
+
+            if (cbxCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione un criterio para filtrar");
+                return true;
+            }
+            return false;
+
+        }
+
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                if (ValidarFiltro())
+                    return;
+
                 string campo = cbxCampo.SelectedItem.ToString();
                 string criterio = cbxCriterio.SelectedItem.ToString();
-                int filtro = (int)numFiltro.Value;
+                int filtro = (int)numFiltro.Value; 
                 dgvListaArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
 
 

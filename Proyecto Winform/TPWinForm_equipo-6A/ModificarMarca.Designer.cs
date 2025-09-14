@@ -32,7 +32,7 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblAgregarMarca = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDescripcion
@@ -71,15 +71,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnCrear
+            // btnModificar
             // 
-            this.btnCrear.Location = new System.Drawing.Point(29, 172);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(75, 23);
-            this.btnCrear.TabIndex = 5;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnModificar.Location = new System.Drawing.Point(29, 172);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 5;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // ModificarMarca
             // 
@@ -89,7 +89,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblAgregarMarca);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnCrear);
+            this.Controls.Add(this.btnModificar);
             this.MaximumSize = new System.Drawing.Size(253, 287);
             this.MinimumSize = new System.Drawing.Size(253, 287);
             this.Name = "ModificarMarca";
@@ -107,6 +107,6 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblAgregarMarca;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

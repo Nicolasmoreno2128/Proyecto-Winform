@@ -30,9 +30,7 @@
         {
             this.dgvListaArticulos = new System.Windows.Forms.DataGridView();
             this.lblListaArticulos = new System.Windows.Forms.Label();
-            this.btbAgregarArticulo = new System.Windows.Forms.Button();
             this.btbModificararticulo = new System.Windows.Forms.Button();
-            this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.numFiltro = new System.Windows.Forms.NumericUpDown();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
@@ -52,10 +50,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvListaArticulos.Location = new System.Drawing.Point(57, 60);
+            this.dgvListaArticulos.Location = new System.Drawing.Point(57, 85);
             this.dgvListaArticulos.Name = "dgvListaArticulos";
             this.dgvListaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaArticulos.Size = new System.Drawing.Size(775, 190);
+            this.dgvListaArticulos.Size = new System.Drawing.Size(775, 303);
             this.dgvListaArticulos.TabIndex = 1;
             // 
             // lblListaArticulos
@@ -68,36 +66,15 @@
             this.lblListaArticulos.TabIndex = 2;
             this.lblListaArticulos.Text = "Lista de Artículos";
             // 
-            // btbAgregarArticulo
-            // 
-            this.btbAgregarArticulo.Location = new System.Drawing.Point(57, 340);
-            this.btbAgregarArticulo.Name = "btbAgregarArticulo";
-            this.btbAgregarArticulo.Size = new System.Drawing.Size(80, 37);
-            this.btbAgregarArticulo.TabIndex = 3;
-            this.btbAgregarArticulo.Text = "Agregar Artículos";
-            this.btbAgregarArticulo.UseVisualStyleBackColor = true;
-            this.btbAgregarArticulo.Click += new System.EventHandler(this.btbAgregarArticulo_Click);
-            // 
             // btbModificararticulo
             // 
-            this.btbModificararticulo.Location = new System.Drawing.Point(181, 340);
+            this.btbModificararticulo.Location = new System.Drawing.Point(598, 403);
             this.btbModificararticulo.Name = "btbModificararticulo";
-            this.btbModificararticulo.Size = new System.Drawing.Size(73, 37);
+            this.btbModificararticulo.Size = new System.Drawing.Size(73, 23);
             this.btbModificararticulo.TabIndex = 4;
             this.btbModificararticulo.Text = "Modificar Artículos";
             this.btbModificararticulo.UseVisualStyleBackColor = true;
             this.btbModificararticulo.Click += new System.EventHandler(this.btbModificararticulo_Click);
-            // 
-            // btnEliminarArticulo
-            // 
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(299, 340);
-            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
-            this.btnEliminarArticulo.Size = new System.Drawing.Size(74, 37);
-            this.btnEliminarArticulo.TabIndex = 5;
-            this.btnEliminarArticulo.Text = "Eliminar Articulos";
-            this.btnEliminarArticulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
-            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
             // numFiltro
             // 
@@ -106,7 +83,7 @@
             0,
             0,
             0});
-            this.numFiltro.Location = new System.Drawing.Point(484, 283);
+            this.numFiltro.Location = new System.Drawing.Point(463, 56);
             this.numFiltro.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -118,7 +95,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(637, 281);
+            this.btnFiltrar.Location = new System.Drawing.Point(598, 54);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
             this.btnFiltrar.TabIndex = 19;
@@ -129,7 +106,7 @@
             // cbxCriterio
             // 
             this.cbxCriterio.FormattingEnabled = true;
-            this.cbxCriterio.Location = new System.Drawing.Point(294, 281);
+            this.cbxCriterio.Location = new System.Drawing.Point(284, 56);
             this.cbxCriterio.Name = "cbxCriterio";
             this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
             this.cbxCriterio.TabIndex = 18;
@@ -137,7 +114,7 @@
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(246, 289);
+            this.lblCriterio.Location = new System.Drawing.Point(245, 59);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(42, 13);
             this.lblCriterio.TabIndex = 17;
@@ -146,7 +123,7 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(60, 289);
+            this.lblCampo.Location = new System.Drawing.Point(54, 60);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(43, 13);
             this.lblCampo.TabIndex = 16;
@@ -155,7 +132,7 @@
             // cbxCampo
             // 
             this.cbxCampo.FormattingEnabled = true;
-            this.cbxCampo.Location = new System.Drawing.Point(109, 281);
+            this.cbxCampo.Location = new System.Drawing.Point(103, 56);
             this.cbxCampo.Name = "cbxCampo";
             this.cbxCampo.Size = new System.Drawing.Size(121, 21);
             this.cbxCampo.TabIndex = 15;
@@ -163,7 +140,7 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(442, 289);
+            this.lblFiltro.Location = new System.Drawing.Point(422, 59);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(35, 13);
             this.lblFiltro.TabIndex = 14;
@@ -171,7 +148,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(757, 355);
+            this.btnCerrar.Location = new System.Drawing.Point(757, 403);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 21;
@@ -181,11 +158,11 @@
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(413, 341);
+            this.btnDetalle.Location = new System.Drawing.Point(677, 403);
             this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(74, 37);
+            this.btnDetalle.Size = new System.Drawing.Size(74, 23);
             this.btnDetalle.TabIndex = 22;
-            this.btnDetalle.Text = "Ver Detalle";
+            this.btnDetalle.Text = "Detalles";
             this.btnDetalle.UseVisualStyleBackColor = true;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
@@ -203,9 +180,7 @@
             this.Controls.Add(this.lblCampo);
             this.Controls.Add(this.cbxCampo);
             this.Controls.Add(this.lblFiltro);
-            this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btbModificararticulo);
-            this.Controls.Add(this.btbAgregarArticulo);
             this.Controls.Add(this.lblListaArticulos);
             this.Controls.Add(this.dgvListaArticulos);
             this.MaximumSize = new System.Drawing.Size(900, 489);
@@ -225,9 +200,7 @@
 
         private System.Windows.Forms.DataGridView dgvListaArticulos;
         private System.Windows.Forms.Label lblListaArticulos;
-        private System.Windows.Forms.Button btbAgregarArticulo;
         private System.Windows.Forms.Button btbModificararticulo;
-        private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.NumericUpDown numFiltro;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.ComboBox cbxCriterio;

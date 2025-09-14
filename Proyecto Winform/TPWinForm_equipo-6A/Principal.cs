@@ -48,6 +48,7 @@ namespace TPWinForm_equipo_6A
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Ubicación de requisitos:\n- ABL de Artículos, Categorías, Marcas e Imágenes desde Menú Principal\n-Modificar registros: Acceso desde las listas.\n-Detalle de artículo: Acceso desde lista de artículos.\n-Filtros: Lista de artículos");
 
         }
 

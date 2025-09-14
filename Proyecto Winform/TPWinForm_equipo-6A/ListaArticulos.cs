@@ -110,5 +110,24 @@ namespace TPWinForm_equipo_6A
                 detalle.ShowDialog();
             }
         }
+
+        private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxCampo.SelectedItem.ToString() == "Id")
+            {
+                numFiltro.Increment = 1;      
+                numFiltro.Maximum = 1000000;  
+                numFiltro.Minimum = 0;
+                numFiltro.Value = 0;
+            }
+            else if (cbxCampo.SelectedItem.ToString() == "Precio")
+            {
+                numFiltro.Increment = 1000;  
+                numFiltro.Maximum = 10000000;  
+                numFiltro.Minimum = 0;
+                numFiltro.Value = 0;
+
+            }
+        }
     }
 }
